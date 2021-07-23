@@ -99,7 +99,7 @@ void print_payload(const u_char *payload)
 // DIP -> 30
 // SPORT -> 34
 // DPORT -> 36
-// HTTP -> 54
+// DATA -> 54
 
 void print_infomation(const u_char *packet)
 {

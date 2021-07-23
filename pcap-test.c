@@ -105,8 +105,8 @@ void print_infomation(const u_char *packet)
 {
     if ((packet[12] << 8 | packet[13]) == 2048 || packet[23] == 6)
     {
-		printf("%d %d\n", (packet[12] << 8 | packet[13]), packet[12]);
-        printf("invalid type... (It is not IPv4 or TCP packet)\n");
+	printf("%d %d\n", (packet[12] << 8 | packet[13]), packet[12]);
+        printf("invalid type... (It is not IPv4 or TCP packet)\n\n");
         return;
     }
 
@@ -124,6 +124,7 @@ void print_infomation(const u_char *packet)
     print_port(&packet[36]);
     printf("PAYLOAD = ");
     print_payload(&packet[54]);
+    printf("\n");
 
     return;	
 }
